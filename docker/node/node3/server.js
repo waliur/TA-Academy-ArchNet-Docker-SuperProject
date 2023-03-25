@@ -8,8 +8,8 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get(['/', '/CS1'], (req, res) => {
-  res.send('Hello World - NodeJS - CS1');
+app.get(['/', '/CS3'], (req, res) => {
+  res.send('Hello World - NodeJS - CS3');
 });
 
 app.listen(PORT, HOST, () => {

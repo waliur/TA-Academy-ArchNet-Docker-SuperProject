@@ -11,7 +11,7 @@ services:
     - NGINX_PORT=80
 
   node1:
-    container_name: node1
+    container_name: CS1
     image: "node:18"
     user: "node"
     working_dir: /home/node/app
@@ -20,11 +20,11 @@ services:
     volumes:
       - ./node/node1:/home/node/app
     ports:
-      - "8081:8080"
+      - "8082:8080"
     command: "npm start"
 
   node2:
-    container_name: node2
+    container_name: CS2
     image: "node:18"
     user: "node"
     working_dir: /home/node/app
@@ -33,5 +33,45 @@ services:
     volumes:
       - ./node/node2:/home/node/app
     ports:
-      - "8082:8080"
+      - "8083:8080"
     command: "npm start"
+
+  node3:
+    container_name: CS3
+    image: "node:18"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./node/node3:/home/node/app
+    ports:
+      - "8084:8080"
+    command: "npm start"
+
+  node4:
+    container_name: CS4
+    image: "node:18"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./node/node4:/home/node/app
+    ports:
+      - "8085:8080"
+    command: "npm start"
+
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
