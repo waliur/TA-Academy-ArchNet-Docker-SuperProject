@@ -1,1 +1,2 @@
 docker/node/*/node_modules
+react-test/*
