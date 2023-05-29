@@ -14,11 +14,13 @@ services:
     container_name: CS1
     image: "node:18"
     user: "node"
-    working_dir: /home/node/app
+    working_dir: /home/node
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node1:/home/node/app
+      - ./node/node1:/home/node
+      - ./public:/home/public
+      - ./frontend/build:/home/frontend/build
     ports:
       - "8082:8080"
       ##- "127.0.0.1:9229:9229"
@@ -71,12 +73,12 @@ services:
     environment:
       POSTGRES_PASSWORD: password
 
-  # adminer:
-  #   container_name: adminer
-  #   image: adminer
-  #   restart: always
-  #   ports:
-  #     - 8081:8080
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 808:8080
 
   pgadmin:
     container_name: pgadmin
