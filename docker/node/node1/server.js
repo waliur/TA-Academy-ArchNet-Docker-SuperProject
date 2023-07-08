@@ -14,13 +14,13 @@ const HOST = '0.0.0.0';
 const publicPath = path.join(__dirname, "..", "public");
 
 // React Build path
-const reactBuildPath = path.join(__dirname, "..",  "frontend", "build");
+const reactBuildPath = path.join(__dirname, "..",  "react", "build");
 
 // Index.html
 const indexPath = path.join(__dirname, "..",  "public", "index.html");
 
 // React Build Index.html
-const reactBuildIndexPath = path.join(__dirname, "..",  "frontend", "build", "index.html");
+const reactBuildIndexPath = path.join(__dirname, "..",  "react", "build", "index.html");
 
 // Declare react build folder first as Express loads first available index.html from multiple paths!
 app.use('/CS1', express.static(reactBuildPath));

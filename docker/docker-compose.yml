@@ -19,8 +19,7 @@ services:
       - NODE_ENV=production
     volumes:
       - ./node/node1:/home/node
-      - ./public:/home/public
-      - ./frontend/build:/home/frontend/build
+      - ./react/react1/build:/home/react/build
     ports:
       - "8082:8080"
       ##- "127.0.0.1:9229:9229"
@@ -30,11 +29,12 @@ services:
     container_name: CS2
     image: "node:18"
     user: "node"
-    working_dir: /home/node/app
+    working_dir: /home/node/
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node2:/home/node/app
+      - ./node/node2:/home/node/
+      - ./react/react2/build:/home/react/build
     ports:
       - "8083:8080"
     command: "npm start"
@@ -43,11 +43,11 @@ services:
     container_name: CS3
     image: "node:18"
     user: "node"
-    working_dir: /home/node/app
+    working_dir: /home/node/
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node3:/home/node/app
+      - ./node/node3:/home/node/
     ports:
       - "8084:8080"
     command: "npm start"
@@ -56,11 +56,12 @@ services:
     container_name: CS4
     image: "node:18"
     user: "node"
-    working_dir: /home/node/app
+    working_dir: /home/node/
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node4:/home/node/app
+      - ./node/node4:/home/node/
+      - ./react/react4/build:/home/react/build
     ports:
       - "8085:8080"
     command: "npm start"
