@@ -1,0 +1,3 @@
+[submodule "docker/CS1/TA-Academy-ArchNet-CS1"]
+	path = docker/CS1/TA-Academy-ArchNet-CS1
+	url = git@github.com:waliur/TA-Academy-ArchNet-CS1.git

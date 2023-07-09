@@ -18,8 +18,8 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node1:/home/node
-      - ./react/react1/build:/home/react/build
+      - ./CS1/node:/home/node
+      - ./CS1/react/build:/home/react/build
     ports:
       - "8082:8080"
       ##- "127.0.0.1:9229:9229"
@@ -33,8 +33,8 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node2:/home/node/
-      - ./react/react2/build:/home/react/build
+      - ./CS2/node:/home/node
+      - ./CS2/react/build:/home/react/build
     ports:
       - "8083:8080"
     command: "npm start"
@@ -47,7 +47,8 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node3:/home/node/
+      - ./CS3/node:/home/node
+      - ./CS3/react/build:/home/react/build
     ports:
       - "8084:8080"
     command: "npm start"
@@ -60,8 +61,8 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./node/node4:/home/node/
-      - ./react/react4/build:/home/react/build
+      - ./CS4/node:/home/node
+      - ./CS4/react/build:/home/react/build
     ports:
       - "8085:8080"
     command: "npm start"
