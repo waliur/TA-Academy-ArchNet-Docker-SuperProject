@@ -1,3 +1,12 @@
-[submodule "docker/CS1/TA-Academy-ArchNet-CS1"]
-	path = docker/CS1/TA-Academy-ArchNet-CS1
+[submodule "docker/CS1"]
+	path = docker/CS1
 	url = git@github.com:waliur/TA-Academy-ArchNet-CS1.git
+[submodule "docker/CS2"]
+	path = docker/CS2
+	url = git@github.com:waliur/TA-Academy-ArchNet-CS2.git
+[submodule "docker/CS3"]
+	path = docker/CS3
+	url = git@github.com:waliur/TA-Academy-ArchNet-CS3.git
+[submodule "docker/CS4"]
+	path = docker/CS4
+	url = git@github.com:waliur/TA-Academy-ArchNet-CS4.git

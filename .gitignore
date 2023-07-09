@@ -1,4 +1,1 @@
-docker/node/*/node_modules
-react-test/*
-docker/node/*/.npm
 .DS_Store
